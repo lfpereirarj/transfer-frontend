@@ -1,0 +1,87 @@
+doctype html
+html(lang="pt-Br")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Transfer Ilha Grande
+    link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i', rel='stylesheet')
+    link(rel="stylesheet" href="/assets/css/vendors.min.css")
+    link(rel="stylesheet" href="/assets/css/main.min.css")
+  body
+    .wrapper
+      include includes/header.pug
+      main.content
+        .container
+            form#step-form.form(action="", novalidate)
+                ul.progress__bar
+                    li.active Dados Pessoais
+                    li Transfer
+                    li Confirmação
+                    li Pagamento
+                .form__content    
+                    fieldset.fieldset
+                        h2 Dados Pessoais
+                        .form-group
+                            input#nome.form-control(type='text', placeholder='Nome')
+                            .invalid-feedback
+                                | Digite o seu nome.
+                        .form-group
+                            input#phone.form-control(type='tel', placeholder='Telefone')
+                            .invalid-feedback
+                                | Digite o seu telefone.
+                        .form-group
+                            input#email.form-control(type='email', placeholder='E-mail')
+                            .invalid-feedback
+                                | Digite o seu email.
+                        button.btn.btn-primary.next.disabled Próximo
+                    fieldset.fieldset
+                        h2 Transfer
+                        .form-group
+                            .input-group.mb-2
+                                .input-group-prepend
+                                    .input-group-text
+                                        i.fi.fi-date
+                                input#datepicker.form-control(type='text', placeholder='Data Transfer')
+
+                        .form-group
+                            select.custom-select
+                                option(selected='') Horário do transfer
+                                option(value='1') Manhã 1 (Entre 5h e 7:15) – Destino Vila do Abraão ou Araçatiba
+                                option(value='2') Manhã 2 (Entre 8:45h e 11:15h) – Destino Vila do Abraão
+                                option(value='3') Tarde (Entre 13:20h e 15h) – Destino Vila do Abraão
+                        .form-group
+                            input.form-control(type='text', placeholder='Paxs (Quantidade de pessoas)')
+                        .form-group
+                            select.custom-select
+                                option(selected='') Local de embarque
+                                option(value='1') Aeroportos
+                                option(value='2') Zona Sul
+                        .form-group
+                            select.custom-select
+                                option(selected='') Destino
+                                option(value='1') Vila do Abraão (Ilha Grande)
+                                option(value='2') Praia de Araçatiba          
+                                option(value='3') Outros  
+                        .form-group
+                            input.form-control(type='text', placeholder='Cidade e País de origem')
+                        .form-group
+                            select.custom-select
+                                option(selected='') Pacote de Viagem
+                                option(value='1') Ida e Volta
+                                option(value='2') Ida                     
+                        button.btn.btn-primary.previous Anterior
+                        button.btn.btn-primary.next.disabled Próximo
+                    fieldset.fieldset    
+                        h2 Confirmação
+                        button.btn.btn-primary.previous Anterior
+                        button.btn.btn-primary.next.disabled Próximo    
+                    fieldset.fieldset    
+                        h2 Pagamento
+                        button.btn.btn-primary.previous Anterior
+                        button.btn.btn-primary.next.disabled Próximo
+
+
+
+    script(src="/assets/js/vendors.min.js")
+    script(src="/assets/js/main.min.js")

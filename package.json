@@ -1,19 +1,37 @@
 {
-  "name": "transfer-frontend",
+  "name": "tranfer-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "prod": "gulp --production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lfpereirarj/transfer-frontend.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lfpereirarj/transfer-frontend/issues"
-  },
-  "homepage": "https://github.com/lfpereirarj/transfer-frontend#readme"
+  "devDependencies": {
+    "@chenfengyuan/datepicker": "^1.0.0-beta",
+    "admin-lte": "^2.3.6",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "bootstrap": "^4.1.2",
+    "dotenv": "^6.0.0",
+    "font-awesome": "^4.6.3",
+    "fontisto": "^3.0.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.3",
+    "run-sequence": "^2.2.0"
+  }
 }
